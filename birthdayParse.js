@@ -6,7 +6,7 @@ var ancestryData = require("./ancestry.js");
 var ancestry = JSON.parse(ancestryData);
 var bday = function(arr){ 
   return arr.filter(function(val){ 
-  return val.died > 1800 && (val.died - val.born < 40); 
+  	return val.died > 1800 && (val.died - val.born < 40); 
   }) 
 }; 
 console.log(bday(ancestry));
