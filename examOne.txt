@@ -1,0 +1,193 @@
+Problem 1: 
+Explain the statement <script type="text/javascript" src=”scripts/javascript.js”></script>
+
+Answer 1:
+The statement is a line of html code, a script element, with both a starting ("<script>") 
+and ending ("</script>") tag. The type attribute indicates the media type, which is text, 
+and the scripting language, which is javascript. The src attribute gives the location 
+of an external script, which here is in the scripts directory, and the name of the file,
+which here is "javascript.js".
+
+***************************************************************************************************************
+Problem 2:
+Assume there is an external JavaScript file called myScripts.js. Write a complete <script> element that will 
+attach myScripts.js to the HTML file containing your script element.
+
+Answer 2: 
+<!DOCTYPE HTML>
+<html>
+	<body>
+	<script type="text/javascript" src="js/myScripts.js"></script>
+	</body>
+</html>
+
+***************************************************************************************************************
+Problem 3:
+What do these logical expressions evaluate to?
+
+Answer 3:
+a. true && true - TRUE
+b. true || false - TRUE
+c. false && !(true) - FALSE
+d. !(false) && !(false) - TRUE
+
+***************************************************************************************************************
+Problem 4:
+Write a script that prompts for a string of text and alerts the string made up of this value appended to itself
+twice. For example, if the user inputs "ho", your script should alert "hohoho". If the user inputs "888",
+your script should alert"888888888".
+
+Answer 4:
+Please see file: exam1Prob4.js
+
+***************************************************************************************************************
+Problem 5:
+Explain Automatic Type Conversion in JavaScript
+
+Answer 5:
+JavaScript has six basic types: numbers, strings, Booleans, objects, functions, and undefined values. If 
+JavaScript encounters a type that is incorrect for the operation it is performing, it will automatically convert
+a type to a different type in order to perform the operation (type coersion). For example, if JavaScript 
+encounters a numberin a string, such as "3", and is asked to add "3" and 2, rather than returning an error based
+upon the data type, JavaScript will use type coersion, turn the integer 2 into the string "2", so that "3" + 2 
+will evaluate to 32. 
+
+***************************************************************************************************************
+Problem 6:
+Provide the output to console. Hint: variable scope question
+
+var x = "good morning!";
+var f1 = function() {
+	x = "good afternoon";
+	};
+f1();
+console.log(x);
+// What is outputted to console?
+
+Answer:
+The phrase "good afternoon" is output to the console. In line 1, "x" is defined as a global variable. In line 2, 
+there is a function expression, f1, which when called, will change the value of x. In line 3, f1 is called, 
+which then changes the value of x. In line 4, the value of x is printed to the console, which is "good afternoon".
+
+var f2 = function() {
+	var x = "good evening";
+}
+f2();
+console.log(x);
+// What is outputted to console?
+
+Answer: If the script above remains, then the console will output "good afternoon", because the re-definition 
+of "x" occurs inside the local scope of function f2 - it is like a private variable - and so the value of x stored 
+in memory is "good afternoon". However, if the script above does not remain (e.g. quitting the console and
+re-starting and only running this script), then a reference error will occur. Since the definition of "x"
+occurs inside the f2 function, it only has local scope and attempting to call it outside of the scope of the 
+f2 function will result in an error because it does not have global scope. 
+
+***************************************************************************************************************
+Problem 7:
+Write a JavaScript function that displays in a dialog box the data type of the variable x, where x is passed
+to the function as a parameter.
+
+Answer 7:
+Please see file: exam1Prob7.js
+
+***************************************************************************************************************
+Problem 8:
+var myQuote="He who laughs, lasts.";
+Give the value of each of the following expressions:
+
+Answer 8: 
+a. myQuote.toUpperCase()
+Answer: HE WHO LAUGHS, LASTS.
+b. myQuote.indexOf("a")
+Answer: 8
+c. myQuote.indexOf("@", 1)
+Answer: -1
+d. myQuote.indexOf("who")
+Answer: 3
+e. myQuote.indexOf("a", 10)
+Answer: 16
+f. myQuote.lastIndexOf("a")
+Answer: 16
+g. myQuote.lastIndexOf("a", 7)
+Answer: -1 
+h. myQuote.lastIndexOf("a", 10)
+Answer: 8
+i. myQuote.charAt(7)
+Answer: l
+j. myQuote.charAt(myQuote.length)
+Answer: nothing -- the length property starts counting at 1, and so it is longer than the index by 1 (since the
+index starts a 0), which means that there is no character at the length of the myQuote string. 
+k. myQuote.charAt(myQuote.length 3)
+Answer: t
+
+***************************************************************************************************************
+Problem 9:
+Explain the below code. Include the final output to console.log().
+Tip: Higher Order Function (Callback).
+function Thing(name) {
+	this.name = name;
+}
+Thing.prototype.doSomething = function(callback, salutation) {
+	callback.call(this, salutation);
+}
+function Afunction(salutation) {
+	console.log(salutation + " " + this.name);
+}
+var t = new Thing('John Smith');
+t.doSomething(Afunction, 'Hello');
+
+Answer 9:
+In lines 1-3, there is a constructor for an object named Thing. The keyword 'this' is a placeholder, and will 
+assign the value of the name argument to the name property when a Thing object is created.
+In lines 4-6, a method is being added to the prototype of Thing. A prototype is fallback; all objects in the 
+prototype chain will inherit the properties and methods of the prototype. The method has two parameters, 
+callback (which is a function) and salutation.  In line 5, the call function is applied to callback, which 
+invokes the callback function, which takes the value to be used as the "this object" inside the function 
+as the first paramter, and then the remaining arguments. 
+In lines 7-9, a new function, named Afunction is defined, which takes a salutation as a parameter, and then
+outputs the salutation, and a space, and the name value of the object involved.  
+In line 10, a new Thing object is created using the constructor in lines 1-3, with the value "John Smith"
+assigned to the name property, and the new Thing object is assigned to the variable t.
+In line 11, the doSomething method is called on the t object, and is given Afunction as the callback function, 
+and "Hello" as the salutation.
+The result when this code executes is "Hello John Smith."
+
+***************************************************************************************************************
+Problem 10:
+What are the advantages of using Objects in JavaScript. Min 50 words
+
+Answer 10:
+Using objects in JavaScript provides several advantages. JavaScript objects are essentially containers that 
+hold a bunch of properties, e.g. name and value combinations. Traditionally, objects are useful because of 
+encapsulation (data is closely associated with desired functionality), abstraction (do not have to know the 
+information a method uses to work), and polymorphism (can make different but interchangeable parts). 
+
+To me, the real advantage of using objects is that an object can model anything, which gives a programmer the 
+flexbility to create what is needed to achieve a certain task. For example, if I need to create a coloring
+program, I can just create a prototype for a crayon that has certain shared properties that all crayons 
+have (shading, point definition, line weight, etc...) and then make individual crayon objects that will all have
+these properties -- without having to re-define them each time, but then I can add specific properties to 
+particular crayon objects, for example, the lighter color crayons need more transparency, and darker color
+crayons need more opaqueness.
+
+***************************************************************************************************************
+Problem 11:
+Create a an Object constructor function called MedRecord with the properties firstName,
+lastName, medRecord, medID, insuranceInfo.
+Define a MedRecord prototype method called changeInsurance() that accepts the name of a
+patient new insurance information and update object insuranceInfo property.
+
+Answer 11:
+Please see file: exam1Prob11.js
+
+***************************************************************************************************************
+Problem 12:
+Put the below data in a JSON formatted array where each individual is its own object. Then write
+code that will print each person's first letter of their first name and last name (example: msmith)
+firstName: Mike lastName: Smith
+firstName: Anna lastName: House
+firstName: Mark lastName: McDonald
+
+Answer: 12:
+Please see file: exam1Prob12.js
