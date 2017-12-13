@@ -11,37 +11,17 @@
           text-align: center;
           padding: 15px;
       }
-      .clearfix::after {
-          content: "";
-          clear: both;
-          display: table;
+      #thumbnails {
+        width: 65%;
+        margin: 10px auto;
       }
-      .thumbnails .img {
+      #thumbnails img {
         float: left;
-        width: 100px;
+        width: 20%;
         height: 100px;
+        outline: 1px solid;
       }
-      .thumbnails ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-      }
-      .thumbnails li a {
-          margin-bottom: 4px;
-          display: block;
-          padding: 8px;
-          background-color: #eee;
-          text-decoration: none;
-          color: #666;
-      }
-      .thumbnails li a:hover {
-          background-color: #555;
-          color: white;
-      }
-      .thumbnails li a.active {
-          background-color: #008CBA;
-          color: white;
-      }	
+      }	*/
     </style>
 		<title>Holiday Helper</title>
 	</head>
@@ -51,13 +31,13 @@
     <div class="BigPic">
       <h1>The City</h1>
     </div>
-<div class="column content">
+<div class="column">
     <h1>Holiday Shopping Helper</h1>
     <h2>Need to find the <em>right</em> holiday gift?</h2>
     <p>Choose the holiday occassion below:</p>
 </div>
 
-<div class="thumbnails">
+<div id="thumbnails">
       <!-- Christmas -->
     <div id="Christmas" class="icon">
         <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">Christmas
