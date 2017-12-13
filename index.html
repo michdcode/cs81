@@ -4,74 +4,85 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
 		<style>
-      body {
-          margin: 0;
+      #bigPic {
+        position: absolute;
+        left: 50%;
+        top: 25%; 
+        margin-left: -150px;
+        margin-top: -150px;
       }
-      .column {
-          text-align: center;
-          padding: 15px;
+      #bigPic img {
+        width: 200px;
+        height: 200px;
+      }
+      #intro {
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        padding: 15px;
+        position: absolute;
+        margin-top: 300px;
+        margin-left: 250px;
       }
       #thumbnails {
-        width: 65%;
-        margin: 10px auto;
+        width:100%;
+        margin: 10px;
+        position: absolute;
+        margin-top: 600px;
+        margin-bottom: 5px;
       }
-      #thumbnails img {
+      #thumbnails a, img {
         float: left;
-        width: 20%;
+        width: 100px;
         height: 100px;
-        outline: 1px solid;
+        margin: 5px;
       }
-      }	*/
     </style>
 		<title>Holiday Helper</title>
 	</head>
 <body>
-
-  
-    <div class="BigPic">
-      <h1>The City</h1>
-    </div>
-<div class="column">
+  <div id="bigPic">
+    <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts">
+      <img src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">
+    </a>
+  </div>
+  <div id="intro">
     <h1>Holiday Shopping Helper</h1>
     <h2>Need to find the <em>right</em> holiday gift?</h2>
     <p>Choose the holiday occassion below:</p>
-</div>
-
-<div id="thumbnails">
-      <!-- Christmas -->
-    <div id="Christmas" class="icon">
-        <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">Christmas
-        <img src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">
-        </a>
-    </div>
-      <!-- Hanukkah -->
-    <div id="Hanukkah" class="icon">
-        <a href="https://www.traditionsjewishgifts.com/hanukah-best-gift-ideas.html">Hanukkah
-        <img src="/Users/Michelle/coding/cs81/Images/hanukkah.png" alt="Menorah">
-        </a>
-    </div>
-      <!-- New Year's -->
-    <div id="NewYear" class="icon">
-        <a href="http://nymag.com/strategist/2016/12/best-hostess-gifts-new-years-edition.html">New Year
-        <img src="/Users/Michelle/coding/cs81/Images/newYear.png" alt="Fireworks">
-        </a>
-    </div>
-      <!-- Winter Solstice -->
-    <div id="Solstice" class="icon">
-        <a href="https://www.etsy.com/market/winter_solstice">Winter Solstice
-        <img src="/Users/Michelle/coding/cs81/Images/solstice.png" alt="Moon">
-        </a>
-    </div>
-      <!-- Festivus -->
-    <div id="Festivus" class="icon">
-        <a href="http://www.cafepress.com/+festivus+gifts">Festivus
-        <img src="/Users/Michelle/coding/cs81/Images/festivus.png" alt="Festivus Pole">
-        </a>
-    </div>
   </div>
-
-</div>
-
+  <span id="thumbnails">
+        <!-- Christmas -->
+      <span id="Christmas" class="icon">
+        <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">
+          <img src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">Christmas
+        </a>
+          
+      </span>
+        <!-- Hanukkah -->
+      <span id="Hanukkah" class="icon">
+          <a href="https://www.traditionsjewishgifts.com/hanukah-best-gift-ideas.html">
+          <img src="/Users/Michelle/coding/cs81/Images/hanukkah.png" alt="Menorah">Hanukkah
+          </a>
+      </span>
+        <!-- New Year's -->
+      <span id="NewYear" class="icon">
+          <a href="http://nymag.com/strategist/2016/12/best-hostess-gifts-new-years-edition.html">
+          <img src="/Users/Michelle/coding/cs81/Images/newYear.png" alt="Fireworks">New Year
+          </a>
+      </span>
+        <!-- Winter Solstice -->
+      <span id="Solstice" class="icon">
+          <a href="https://www.etsy.com/market/winter_solstice">
+          <img src="/Users/Michelle/coding/cs81/Images/solstice.png" alt="Moon">Solstice
+          </a>
+      </span>
+        <!-- Festivus -->
+      <span id="Festivus" class="icon">
+          <a href="http://www.cafepress.com/+festivus+gifts">
+          <img src="/Users/Michelle/coding/cs81/Images/festivus.png" alt="Festivus Pole">Festivus
+          </a>
+      </span>
+  </span>
 
 
 </body>
