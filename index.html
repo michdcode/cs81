@@ -20,13 +20,15 @@
         text-align: center;
         padding: 15px;
         position: absolute;
+        left: 50%;
         margin-top: 300px;
-        margin-left: 250px;
+        margin-left: -250px;
       }
       #thumbnails {
         width:100%;
         margin: 10px;
         position: absolute;
+        left: 15%;
         margin-top: 600px;
         margin-bottom: 5px;
       }
@@ -37,6 +39,19 @@
         margin: 5px;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+$(document).ready(function(){
+    $("img.icon").mouseover(function(){
+        var newImage = $(this).attr('src');
+        $("#bigPic img").attr("src", newImage);
+    })});
+$(document).ready(function(){
+    $("a.URI").mouseover(function(){
+        var newURI = $(this).attr('href');
+        $("#bigPic a").attr("href", newURI);
+    })});
+</script>
 		<title>Holiday Helper</title>
 	</head>
 <body>
@@ -48,43 +63,41 @@
   <div id="intro">
     <h1>Holiday Shopping Helper</h1>
     <h2>Need to find the <em>right</em> holiday gift?</h2>
-    <p>Choose the holiday occassion below:</p>
+    <p>Choose the holiday icon below:</p>
   </div>
   <span id="thumbnails">
         <!-- Christmas -->
-      <span id="Christmas" class="icon">
-        <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">
-          <img src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">Christmas
+      <span id="Christmas">
+        <a class="URI" href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">
+          <img class="icon" src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">
         </a>
           
       </span>
         <!-- Hanukkah -->
-      <span id="Hanukkah" class="icon">
-          <a href="https://www.traditionsjewishgifts.com/hanukah-best-gift-ideas.html">
-          <img src="/Users/Michelle/coding/cs81/Images/hanukkah.png" alt="Menorah">Hanukkah
+      <span id="Hanukkah">
+          <a class="URI" href="https://www.traditionsjewishgifts.com/hanukah-best-gift-ideas.html">
+          <img class="icon" src="/Users/Michelle/coding/cs81/Images/hanukkah.png" alt="Menorah">
           </a>
       </span>
         <!-- New Year's -->
-      <span id="NewYear" class="icon">
-          <a href="http://nymag.com/strategist/2016/12/best-hostess-gifts-new-years-edition.html">
-          <img src="/Users/Michelle/coding/cs81/Images/newYear.png" alt="Fireworks">New Year
+      <span id="NewYear" >
+          <a class="URI" href="http://nymag.com/strategist/2016/12/best-hostess-gifts-new-years-edition.html">
+          <img class="icon" src="/Users/Michelle/coding/cs81/Images/newYear.png" alt="Fireworks">
           </a>
       </span>
         <!-- Winter Solstice -->
-      <span id="Solstice" class="icon">
-          <a href="https://www.etsy.com/market/winter_solstice">
-          <img src="/Users/Michelle/coding/cs81/Images/solstice.png" alt="Moon">Solstice
+      <span id="Solstice">
+          <a class="URI" href="https://www.etsy.com/market/winter_solstice">
+          <img class="icon" src="/Users/Michelle/coding/cs81/Images/solstice.png" alt="Moon">
           </a>
       </span>
         <!-- Festivus -->
       <span id="Festivus" class="icon">
-          <a href="http://www.cafepress.com/+festivus+gifts">
-          <img src="/Users/Michelle/coding/cs81/Images/festivus.png" alt="Festivus Pole">Festivus
+          <a class="URI" href="http://www.cafepress.com/+festivus+gifts">
+          <img class="icon" src="/Users/Michelle/coding/cs81/Images/festivus.png" alt="Festivus Pole">
           </a>
       </span>
   </span>
-
-
 </body>
 </html>
 
