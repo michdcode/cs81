@@ -1,85 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
 		<style>
-		* {
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-}
-.header {
-    background-color: #2196F3;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-.column {
-    float: left;
-    padding: 15px;
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-.sidemenu {
-    width: 25%;
-}
-.content {
-    width: 75%;
-}
-.sidemenu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.sidemenu li a {
-    margin-bottom: 4px;
-    display: block;
-    padding: 8px;
-    background-color: #eee;
-    text-decoration: none;
-    color: #666;
-}
-.sidemenu li a:hover {
-    background-color: #555;
-    color: white;
-}
-.sidemenu li a.active {
-    background-color: #008CBA;
-    color: white;
-}	
-		</style>
+      body {
+          margin: 0;
+      }
+      .column {
+          text-align: center;
+          padding: 15px;
+      }
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+      .thumbnails .img {
+        float: left;
+        width: 100px;
+        height: 100px;
+      }
+      .thumbnails ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+      .thumbnails li a {
+          margin-bottom: 4px;
+          display: block;
+          padding: 8px;
+          background-color: #eee;
+          text-decoration: none;
+          color: #666;
+      }
+      .thumbnails li a:hover {
+          background-color: #555;
+          color: white;
+      }
+      .thumbnails li a.active {
+          background-color: #008CBA;
+          color: white;
+      }	
+    </style>
 		<title>Holiday Helper</title>
 	</head>
 <body>
 
-
-
-<div class="clearfix">
   
-
-  <div class="column content">
-    <div class="header">
+    <div class="BigPic">
       <h1>The City</h1>
     </div>
+<div class="column content">
     <h1>Holiday Shopping Helper</h1>
-    <h2>Need to find the <em>right</em>holiday gift?</h2>
-    <p>Choose the holiday occassion below.</p>
-  </div>
+    <h2>Need to find the <em>right</em> holiday gift?</h2>
+    <p>Choose the holiday occassion below:</p>
+</div>
 
-<div class="sidemenu">
-    <ul>
-      <li><a href="#city" class="active">Christmas</a></li>
-      <li><a href="#island">Hanukkah</a></li>
-      <li><a href="#food">New Year's Eve</a></li>
-      <li><a href="#people">Winter Solstice</a></li>
-      <li><a href="#history">Festivus</a></li>
-    </ul>
+<div class="thumbnails">
+      <!-- Christmas -->
+    <div id="Christmas" class="icon">
+        <a href="https://www.uncommongoods.com/gifts/christmas/christmas-gifts" class="active">Christmas
+        <img src="/Users/Michelle/coding/cs81/Images/christmas.png" alt="Christmas Tree icon">
+        </a>
+    </div>
+      <!-- Hanukkah -->
+    <div id="Hanukkah" class="icon">
+        <a href="https://www.traditionsjewishgifts.com/hanukah-best-gift-ideas.html">Hanukkah
+        <img src="/Users/Michelle/coding/cs81/Images/hanukkah.png" alt="Menorah">
+        </a>
+    </div>
+      <!-- New Year's -->
+    <div id="NewYear" class="icon">
+        <a href="http://nymag.com/strategist/2016/12/best-hostess-gifts-new-years-edition.html">New Year
+        <img src="/Users/Michelle/coding/cs81/Images/newYear.png" alt="Fireworks">
+        </a>
+    </div>
+      <!-- Winter Solstice -->
+    <div id="Solstice" class="icon">
+        <a href="https://www.etsy.com/market/winter_solstice">Winter Solstice
+        <img src="/Users/Michelle/coding/cs81/Images/solstice.png" alt="Moon">
+        </a>
+    </div>
+      <!-- Festivus -->
+    <div id="Festivus" class="icon">
+        <a href="http://www.cafepress.com/+festivus+gifts">Festivus
+        <img src="/Users/Michelle/coding/cs81/Images/festivus.png" alt="Festivus Pole">
+        </a>
+    </div>
   </div>
 
 </div>
