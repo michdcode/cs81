@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Birthday Months</title>
+<title>Food Holidays by Month</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Redressed" rel="stylesheet">
 <style>
-	.w3-quarter img{margin-bottom: -6px; cursor: pointer}
-	.w3-quarter img:hover{opacity: 0.60; transition: 0.3s}
-  /*The opacity is set by percentage in CSS*/
+	.w3-quarter img {
+    margin-bottom: -6px; 
+    cursor: pointer;
+  }
+	.w3-quarter img:hover{
+    opacity: 0.60; 
+    transition: 0.3s;
+  }
+  h1 {
+    font-family:'Redressed', cursive;
+    color: black;
+    text-align: center;
+  }
+  p {
+    font-family: Arial, Verdana, sans-serif;
+  }
 </style>
 
 <body class="w3-blue-grey">
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
-  
-  <!-- Photo grid -->
-  <div class="w3-row w3-grayscale-min">
-    <div class="w3-quarter">
-      <img src="pics/January.jpg" style="width:100%" onclick="onClick(this)" alt="January, Garnet" data-facts="National Oatmeal Month, Hot Tea Month, Soup Month">
-      <img src="pics/February.jpg" style="width:100%" onclick="onClick(this)" alt="February, Amethyst">
-      <img src="pics/March.png" style="width:100%" onclick="onClick(this)" alt="March, Aquamarine">
-   </div>
-    
-   <div class="w3-quarter">
-      <img src="pics/April.jpg" style="width:100%" onclick="onClick(this)" alt="April, Diamond">
-      <img src="pics/May.jpg" style="width:100%" onclick="onClick(this)" alt="May, Emerald">
-      <img src="pics/June.png" style="width:100%" onclick="onClick(this)" alt="June, Pearl">
-    </div>
-    
-    <div class="w3-quarter">
-      <img src="pics/July.png" style="width:100%" onclick="onClick(this)" alt="July, Ruby">
-      <img src="pics/August.png" style="width:100%" onclick="onClick(this)" alt="August, Peridot">
-      <img src="pics/September.png" style="width:100%" onclick="onClick(this)" alt="September, Sapphire">
-    </div>
+  <h1> Click on a month to see the food holidays for that month</h1> 
 
-    <div class="w3-quarter">
-      <img src="pics/October.png" style="width:100%" onclick="onClick(this)" alt="October, Opal">
-      <img src="pics/November.png" style="width:100%" onclick="onClick(this)" alt="November, Citrine">
-      <img src="pics/December.png" style="width:100%" onclick="onClick(this)" alt="December, Blue Topaz">
+  <div class="w3-content" style="max-width:1600px; margin-top:30px">
+    <!-- First Column - January, February, March -->
+    <div class="w3-row">
+      <div class="w3-quarter">
+        <img src="pics/January.jpg" style="width:100%" onclick="onClick(this)" alt="January, Garnet" data-facts="National Oatmeal Month, National Hot Tea Month, National Soup Month <br> Notable Days <br> <em>4: National Spaghetti Day <br> 16: International Hot &amp; Spicy Food Day <br> 24: National Peanut Butter Day<em>">
+        <img src="pics/February.jpg" style="width:100%" onclick="onClick(this)" alt="February, Amethyst" data-facts="National Snack Food Month, National Grapefruit Month, National Cherry Month <br> <em>Notable Days <br> 9: National Bagels &amp; Lox Day <br> 15: International Gumdrop Day <br> 28: National Chocolate Souffle Day<em>">
+        <img src="pics/March.png" style="width:100%" onclick="onClick(this)" alt="March, Aquamarine" data-facts="National Peanut Month, National Noodle Month, International Hamburger &amp; Pickle Month <br> <em>Notable Days <br> 4: National Pound Cake Day <br> 14: National Potato Chip Day <br> 20: National Ravioli Day<em>">
+     </div>
+     <!-- Second Column - April, May, June -->
+     <div class="w3-quarter">
+        <img src="pics/April.jpg" style="width:100%" onclick="onClick(this)" alt="April, Diamond" data-facts="National Soft Pretzel Month, Grilled Cheese Sandwich Month, National Pecan Month <br> <em>Notable Days <br> 7: National Coffee Cake Day <br> 11: National Cheese Fondue Day <br> 28: National Blueberry Pie Day<em>">
+        <img src="pics/May.jpg" style="width:100%" onclick="onClick(this)" alt="May, Emerald" data-facts="National Salsa Month, National Strawberry Month, National Salad Month <br> <em>Notable Days <br> 8: National Empanada Day <br> 13: National Apple Pie Day <br> 27: National Grape Popsicle Day<em>">
+        <img src="pics/June.png" style="width:100%" onclick="onClick(this)" alt="June, Pearl" data-facts="National Iced Tea Month, National Seafood Month, National Papaya Month <br> <em>Notable Days <br> 7: National Chocolate Ice Cream Day <br> 18: National Cherry Tart Day <br> 24: National Creamy Pralines Day<em>">
+      </div>
+      <!-- Third Column - July, August, September -->
+      <div class="w3-quarter">
+        <img src="pics/July.png" style="width:100%" onclick="onClick(this)" alt="July, Ruby" data-facts="National Hot Dog Month, National Watermelon Month, National Baked Bean Month <br> <em>Notable Days <br> 5: National Graham Cracker Day <br> 13: National French Fries Day <br> 29: National Lasagna Day<em>">
+        <img src="pics/August.png" style="width:100%" onclick="onClick(this)" alt="August, Peridot" data-facts="National Peach Month, National Catfish Month, National Goat Cheese Month <br> <em>Notable Days <br> 4: National Chocolate Chip Day <br> 16: National S'Mores Day <br> 29: National Lemon Juice Day<em>">
+        <img src="pics/September.png" style="width:100%" onclick="onClick(this)" alt="September, Sapphire" data-facts="National Biscuit Month, National Honey Month, National Potato Month <br> <em>Notable Days <br> 5: National Cheese Pizza Day <br> 14: National Cream-Filled Donut Day <br> 23: National Chocolate Day<em>">
+      </div>
+      <!-- Fourth Column - October, November, December -->
+      <div class="w3-quarter">
+        <img src="pics/October.png" style="width:100%" onclick="onClick(this)" alt="October, Opal" data-facts="National Chili Month, National Pasta Month, Spinach Lovers Month <br> <em>Notable Days <br> 4: National Taco Day <br> 10: National Angel Food Cake Day <br> 31: National Caramel Apple Day<em>">
+        <img src="pics/November.png" style="width:100%" onclick="onClick(this)" alt="November, Citrine" data-facts="National Pepper Month, National Pomegranate Month, National Raisin Month <br> <em>Notable Days <br> 6: National Nachos Day <br> 17: National Baklava Day <br> 23: National Cashew Day<em>">
+        <img src="pics/December.png" style="width:100%" onclick="onClick(this)" alt="December, Blue Topaz" data-facts="National Fruitcake Month, National Egg Nog Month, National Pear Month <br> <em>Notable Days <br> 7: National Cotton Candy Day <br> 12: National Gingerbread House Day <br> 30: National Bacon Day<em>">
+      </div>
+    </div>
+  
+  <!-- Create Modal Window that appears when a month is clicked -->
+    <div id="highlight-month" class="w3-modal w3-blue-grey" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="month-image" class="w3-image w3-border w3-padding"> 
+          <p id="holidays"></p>
+        </div>
     </div>
   </div>
-  
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image w3-border w3-padding"> 
-      <!-- the w3-border & w3 padding add the border to the picture when the modal opens -->
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  
-</div>
 
 <script>
-// Modal Image Gallery
+// Function to add the image and holidays to the selected month 
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+  document.getElementById("month-image").src = element.src;
+  document.getElementById("highlight-month").style.display = "block";
+  var captionText = document.getElementById("holidays");
+  captionText.innerHTML = element.getAttribute("data-facts");
 }
-
 </script>
-
-
 </body>
 </html>
 
